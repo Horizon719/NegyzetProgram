@@ -4,8 +4,8 @@ public class Koordinata {
     private int x, y;
     
     public Koordinata(int x, int y){
-        this.x = setX(x);
-        this.y = setY(y);
+        setX(x);
+        setY(y);
     }
 
     public int getX() {
@@ -15,12 +15,14 @@ public class Koordinata {
     public int getY() {
         return y;
     }
-    
-    public int setX(int x) {
-        return x;
+
+    public void setX(int x) {
+        this.x = x;
     }
 
-    public int setY(int y) {
-        return y;
+    public void setY(int y) {
+        this.y = y;
     }
+    
+    
 }

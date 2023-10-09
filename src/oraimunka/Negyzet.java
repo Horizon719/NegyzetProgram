@@ -5,7 +5,7 @@ public class Negyzet {
     private Koordinata k1;
     
     public Negyzet(int oldal, int x, int y){
-        this.oldal = oldal;
+        setOldal(oldal);
         k1 = new Koordinata(x, y);
     }
     
@@ -25,15 +25,20 @@ public class Negyzet {
         double terulet = Math.pow(oldal, 2);
         return terulet;
     }
-//    
-//    public void allapot() {
-//        System.out.printf("A négyzet állapota:\n\toldala: %d\n\t"
-//                + "koordináta: %d, %d\n\tterület: %.0f\n", oldal, k1.getX(), k1.getY(), this.terulet());
-//    }
+    
+    public String egyformakE(Negyzet uj){
+        if (uj.oldal == this.oldal) {
+            return "egyformák";
+        } else {
+            return "nem egyformák";
+        }
+    }
 
     @Override
     public String toString() {
-        return "Negyzet{" + "oldal=" + oldal + '}';
+        String txt = "A négyzet állapota:\n\toldala: %d\n\t"
+                + "koordináta: %d, %d\n\tterület: %.0f\n".formatted(oldal, k1.getX(), k1.getY(), this.terulet());
+        return txt;
     }
 
     
