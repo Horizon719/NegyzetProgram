@@ -1,20 +1,19 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package oraimunka;
 
-/**
- *
- * @author katona.janos
- */
 public class OraiMunka {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        new OraiMunka().program();
+    }
+    
+    private void program(){
+        Negyzet n1 = new Negyzet();
+        n1.setOldal(5);
+        n1.setX(3);
+        n1.setY(5);
+        System.out.printf("A négyzet adatai:\n%s"
+                + "\tAz oldala %d egység hosszú.\n"
+                + "\tA területe: %.0f egység.\n", n1.getKoordinata(), n1.getOldal(), n1.terulet());
     }
     
 }
