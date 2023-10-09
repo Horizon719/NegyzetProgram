@@ -38,8 +38,8 @@ public class Negyzet {
         return terulet;
     }
     
-    public String getKoordinata(){
-        String txt = "\t    A négyzet a %d, %d koordinátán van.\n".formatted(x, y);
-        return txt;
+    public void allapot() {
+        System.out.printf("A négyzet állapota:\n\toldala: %d\n\t"
+                + "koordináta: %d, %d\n\tterület: %.0f\n", oldal, x,y, this.terulet());
     }
 }
