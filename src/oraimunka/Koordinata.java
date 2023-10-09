@@ -2,6 +2,11 @@ package oraimunka;
 
 public class Koordinata {
     private int x, y;
+    
+    public Koordinata(int x, int y){
+        this.x = setX(x);
+        this.y = setY(y);
+    }
 
     public int getX() {
         return x;
@@ -11,11 +16,11 @@ public class Koordinata {
         return y;
     }
     
-    public void setX(int x) {
-        this.x = x;
+    public int setX(int x) {
+        return x;
     }
 
-    public void setY(int y) {
-        this.y = y;
+    public int setY(int y) {
+        return y;
     }
 }
