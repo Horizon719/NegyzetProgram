@@ -11,7 +11,8 @@ public class OraiMunka {
         Negyzet n2 = new Negyzet(9, 1, 1);
         
         System.out.printf("n1 és n2 négyzetek %s\n", n1.egyformakE(n2));
-        //System.out.println(n1);
+        System.out.println("n1 és n2 négyzetek egyformák--->" + n1.equals(n2));
+        System.out.println(n1);
         
     }
 

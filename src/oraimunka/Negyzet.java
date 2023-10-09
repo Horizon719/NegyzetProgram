@@ -36,10 +36,31 @@ public class Negyzet {
 
     @Override
     public String toString() {
-        String txt = "A négyzet állapota:\n\toldala: %d\n\t"
-                + "koordináta: %d, %d\n\tterület: %.0f\n".formatted(oldal, k1.getX(), k1.getY(), this.terulet());
+        String txt = "A négyzet állapota:\n\toldala: "
+                + "%d\n\tkoordináta: %d, %d\n\tterület: %.0f\n".formatted(oldal, k1.getX(), k1.getY(), this.terulet());
         return txt;
     }
 
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 53 * hash + this.oldal;
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Negyzet other = (Negyzet) obj;
+        return this.oldal == other.oldal;
+    }
     
 }
