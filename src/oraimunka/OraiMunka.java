@@ -8,7 +8,7 @@ public class OraiMunka {
     
     private void program(){
         Negyzet n1 = new Negyzet(6, 2, 3);
-        n1.allapot();
+        System.out.println(n1);
     }
 
 

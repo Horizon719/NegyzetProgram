@@ -25,9 +25,16 @@ public class Negyzet {
         double terulet = Math.pow(oldal, 2);
         return terulet;
     }
-    
-    public void allapot() {
-        System.out.printf("A négyzet állapota:\n\toldala: %d\n\t"
-                + "koordináta: %d, %d\n\tterület: %.0f\n", oldal, k1.getX(), k1.getY(), this.terulet());
+//    
+//    public void allapot() {
+//        System.out.printf("A négyzet állapota:\n\toldala: %d\n\t"
+//                + "koordináta: %d, %d\n\tterület: %.0f\n", oldal, k1.getX(), k1.getY(), this.terulet());
+//    }
+
+    @Override
+    public String toString() {
+        return "Negyzet{" + "oldal=" + oldal + '}';
     }
+
+    
 }
